@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="en">
+   
+     
+<head>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" type="text/css" href="../dist/bootstrap-3.3.5/css/bootstrap.min.css">  
+    
+     <!-- Font Awesome CSS -->   
+    <link rel="stylesheet" type="text/css" href="../dist/font-awesome/css/font-awesome.min.css">
+    
+    <!-- Custom Theme JavaScript -->        
+    <script src="../js/main.js"></script>
+   
+   <!-- Custom CSS -->   
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+   
+
+</head>   
+    
+    
+    
+    <body>
+        
+        
+        <!-- div for popup EditUser Form -->
+      
+        <div class="modal-header">           
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button>
+               <h3 class="modal-title-profile" id="lineModalLabel-profile-form"><i class="fa fa-user"></i>
+                  My Profile </h3>                         
+        </div>
+        
+        <div class="modal-body profile">
+           
+            <form class="user-profile-form">
+                    <div class="row">
+ 			<div class="col-xs-6">
+                            
+                            <div class="text-center">
+                                <img src="//placehold.it/200" id="img-edit-myprofile" class="avatar img-circle" alt="avatar" width="100" height="100">
+                                <h6>Upload a image profile...</h6>
+
+                                <!--<input id="inputFileToLoad" type="file" onchange="encodeImageFileAsURL();"> -->
+                                <input id="inputFileToLoad" type="file" onchange="resizeImage(this)" >
+                            </div>
+                            
+                                <!-- select UNIT -->
+                                <!--div class="form-group">
+                                   <label for="select-unit">Select Unit:</label>
+                                   <select class="form-control" id="select-unit" name="idunit" >
+
+                                   </select>
+                                </div-->
+                   
+                                
+                                 
+              </div><!-- /div .col-xs-6"-->     
+              <div class="col-xs-6">
+                  
+                                <!--div class="form-group">
+  				    <label for="exampleInputUsername4">Username</label>
+  				    <input type="text" class="form-control" name="username" id="username"  placeholder="Enter username">
+                                </div>
+                                
+                                <div class="form-group">
+  				    <label for="exampleInputPassword3">Password</label>
+  				    <input type="text" class="form-control" name="pwd" id="pwd"  placeholder="Enter password">
+				</div--> 
+                               
+                                <div class="form-group">
+                                    <label for="exampleInputName1">Name</label>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter name"> 
+                                </div>
+                    
+                                <div class="form-group hidden" >
+                                    <label for="exampleInputName1">iduser</label>
+                                    <input type="text" name="iduser" id="iduser" placeholder="Enter iduser">
+                                    <input type="text" name="photo" id="photo" >
+                                </div>
+    				
+                                <div class="form-group">
+                                    <label for="exampleInputLastName1">LastName</label>
+                                    <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Enter lastname">
+                                </div>
+                                 
+                                 <!-- select DEPT -->                                                             
+                                <!--div class="form-group">
+                                    <label for="select-dept">Select Dept:</label>
+                                    <select class="form-control" id="select-dept" name="iddept" >
+
+                                    </select>
+                                </div>
+                                
+                                 <!-- select POSITION -->
+                                <!--div class="form-group">
+                                   <label for="select-position">Select Position:</label>
+                                   <select class="form-control" id="select-position" name="idposition"  >
+
+                                   </select>
+                                </div--> 
+                                 
+                                <div class="form-group">
+                                    <label for="exampleInputName2">Email</label>
+                                     <input type="text" class="form-control" name="email" id="email"  placeholder="Enter email">
+                                </div>
+                  
+                                 <div class="form-group">
+  				    <label for="exampleInputName7">Tel</label>
+  				    <input type="text" class="form-control" name="tel" id="tel"  placeholder="Enter Tel">
+                                </div> 
+                                
+                                 
+                                <div class="form-group">
+  				    <label for="exampleInputName9">Address</label>
+                                    <textarea class="form-control custom-control" rows="3" name="address"  id="address" placeholder="Enter Address" style="resize:none"></textarea>  				    
+			        </div> 
+                                 
+                                <!-- select ROLE-->
+                                <!--div class="form-group">
+                                   <label for="select-role">Select Role:</label>
+                                   <select class="form-control" id="select-role" name="idrole"  >
+
+                                   </select>
+                                </div-->                                 
+                  
+                                <!--div class="form-group">
+  				    
+  				    <input type="text" class="form-control hidden" name="actunit" id="actunit" placeholder="Enter actunit">
+                                </div>
+                                
+                                <label for="exampleInputUsername8">Select Action Unit :</label>
+                                <div class="row">    
+                                    <div class="col-md-2"> </div>
+                                    <div class="col-md-10">
+                                         
+                                            <div class="form-group" id="check-unit">
+
+                                               <label class="checkbox"><input type="checkbox" value="" onclick="select_actunit(this.value)">Option 1</label>
+
+                                           </div>
+                                    </div> 
+                                    
+                                </div-->   
+  
+                                <div class="form-group hidden">
+  				    <label for="exampleInputPassword3">form-type</label>
+  				    <input type="text" class="form-control" name="" id="form-type" value="PUT">
+				</div> 
+                                
+            </div><!-- /div .col-xs-6"-->  
+	</div><!--div /.row -->
+        
+                            <div class="row">
+                                <button type="submit" id="submiteditbtn" class="btn btn-primary center-block btn-user-edit">Submit</button>
+                            </div><!--div /.row -->
+
+            </form>
+        </div>
+        <div class="modal-body setpwd"> 
+            <form class="user-setpwd-form">
+                    <div class="row"> 
+                        <div class="col-xs-2"></div> 
+                        <div class="col-xs-8">
+    				<div class="form-group">
+                                    <label for="exampleInputName1">UserName</label>
+                                    <input type="text" class="form-control" name="username" id="username" placeholder="Enter username"> 
+                                </div>
+                    
+                                <div class="form-group hidden" >
+                                    <label for="exampleInputName1">iduser</label>
+                                    <input type="text" name="iduser" id="iduser" placeholder="Enter iduser">
+                                </div>
+                            
+                                <div class="form-group" >
+                                    <label for="exampleInputName1">Password</label>
+                                    <input type="text" class="form-control" name="pwd" id="pwd" placeholder="Enter password">
+                                </div>
+                        </div>    
+                        <div class="col-xs-2"></div>   
+                    </div>
+                    
+                    <div class="row">
+                        <button type="submit" id="submitbtn" class="btn btn-primary center-block btn-user-edit-pwd">Submit</button>
+                    </div><!--div /.row -->
+                    
+            </form>
+            
+            
+        </div>
+ 
+        
+        
+    
+    </body>
+    
+    
+</html>

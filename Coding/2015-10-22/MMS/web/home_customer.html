@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    
+    <title>:: Home MMES ::</title>
+    <link rel="icon" href="favion.ico" type="image/gif" sizes="16x16">    
+     <!-- Bootstrap Core CSS -->    
+    <link rel="stylesheet" type="text/css" href="dist/bootstrap-3.3.5/css/bootstrap.min.css">
+    
+     <!-- jQuery -->
+    <script src="dist/jquery/jquery-2.1.4.min.js"></script>   
+	
+	<!-- Bootstrap Core JavaScript -->
+	<script src="dist/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    
+   
+
+	 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+    
+<body>
+    <nav class="navbar navbar-default navbar-fix-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#id_nav1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">:: M-Xerve ::</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="id_nav1">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New Job <span class="caret"></span></a>
+                    
+                      <ul class="dropdown-menu">
+                        <li><a href="#" data-toggle="modal" data-target="#computer"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Desktop Computer/Notebook/Printer/Multi Function </a></li>
+  
+                        <li><a href="#" data-toggle="modal" data-target="#it_product"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>  Smart Phone/Tablet (iOS-Android Devices) </span></a></li>
+                
+                        <li><a href="#" data-toggle="modal" data-target="#cctv"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>  CCTV/IP Camera </span></a></li>
+        
+                        <li><a href="#" data-toggle="modal" data-target="#access"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>  Access Control </span></a></li>
+
+                        <li><a href="#" data-toggle="modal" data-target="#time_attend"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>  Time Attendance </span></a></li>
+
+    <!--                    <li><a href="#" data-toggle="modal" data-target="#radio"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>  Radio </span></a></li>
+    
+                        <li><a href="#" data-toggle="modal" data-target="#tvm"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>  Thai Voting Machine </span></a></li>
+    -->
+
+                      </ul>
+                  </li>    
+            </ul>
+
+<!-- Add New Job, Popup:Modal -->    
+    <div class="modal fade alert" id="computer" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true"></span>X<span class="sr-only">Close</span></button>
+            <h3 class="modal-title" id="lineModalLabel">New Job</h3>
+        </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="inputAsset">Asset Number</label>
+                        <input type="text" class="form-control" id="inputAsset">
+                    </div>
+              
+                    <div class="form-group">
+                        <label for="inputComName">Computer Name</label>
+                        <input type="text" class="form-control" id="inputComName">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="inputDeviceType">Device Type</label>
+                        <select class="form-control" id="inputDeviceType">
+                            <option>Desktop Computer</option>
+                            <option>Notebook</option>
+                            <option>Printer</option>
+                            <option>Multi Function</option>
+                            <option>Others</option>
+                        </select>
+                    </div>    
+                
+                    <div class="form-group">
+                        <label for="inputJobDetail">Job Detail</label>
+                        <textarea class="form-control" rows="3" id="inputJobDetail"> </textarea>
+                    </div>
+                                  
+                    <div class="form-group">
+                        <button type="button" class="btn btn-success"> Submit </button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+            </form>      
+        </div>
+    </div>
+  </div>
+</div>        
+            
+        
+
+    <!--        <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search..">
+                    <label class="control-label">Name</label>
+            <input id="txtName" class="form-control input-sm" />
+            <span class="glyphicon glyphicon-search"></span> 
+                </div>
+                    <button type="submit" class="btn btn-success">Search</button>
+            </form>
+    -->
+
+
+
+            
+              <ul class="nav navbar-nav navbar-right">
+                 <li class="dropdown">
+                     
+        <!--         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="glyphicon glyphicon-user" aria-hidden="true"></span> My Profile <span class="caret"></span></a>
+                     
+        -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-hidden="true">
+                            
+                        <img class="img-circle avatar" src="../web/img/avatar1.png" width="30" height="30" alt="">
+                        <span class="user-name"> bburm <span class="caret"></span></span>
+                    </a>
+                     
+                      <ul class="dropdown-menu">
+                      <li><a href="#" data-toggle="modal" data-target="#AccountModal"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Account Setting</a></li>
+  
+                          <li><a href="#" data-toggle="modal" data-target="#ProfileModal"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>  Edit Profile </span></a></li>
+                          <li role="separator" class="divider"></li>
+                          <li><a href="#"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Sign Out</a></li>       
+                      </ul>
+                  </li>
+            </ul>
+        
+    <!-- Edit Account Popup:Modal -->    
+    <div class="modal fade alert" id="AccountModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true"></span>X<span class="sr-only">Close</span></button>
+            <h3 class="modal-title" id="lineModalLabel">Edit Account</h3>
+        </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="inputUserName">User Name</label>
+                        <input type="text" class="form-control" id="inputUserName">
+                    </div>
+              
+                    <div class="form-group">
+                        <label for="inputOldPassword">Old Password</label>
+                        <input type="password" class="form-control" id="inputOldPassword">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="inputNewPassword">New Password</label>
+                        <input type="password" class="form-control" id="inputNewPassword">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="inputReNewPassword">Confirm New Password</label>
+                        <input type="password" class="form-control" id="inputReNewPassword">
+                    </div>
+                                  
+                    <div class="form-group">
+                        <button type="button" class="btn btn-success">Save Changes</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+            </form>      
+        </div>
+    </div>
+  </div>
+</div>        
+               
+    <!-- Edit Profile Popup:Modal -->    
+    <div class="modal fade alert" id="ProfileModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true"></span>X<span class="sr-only">Close</span></button>
+            <h3 class="modal-title" id="lineModalLabel">Edit Profile</h3>
+        </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="inputName">Name</label>
+                        <input type="text" class="form-control" id="inputName">
+                    </div>
+              
+                    <div class="form-group">
+                        <label for="inputLastName">Last Name</label>
+                        <input type="text" class="form-control" id="inputLastName">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="inputAddress">Address</label>
+                        <textarea class="form-control" rows="3" id="inputAddress"> </textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="inputEmail">Email</label>
+                        <input type="email" class="form-control" id="inputEmail">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="inputTel">Telephone</label>
+                        <input type="tel" class="form-control" id="inputTel">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="inputDepart">Department</label>
+                        <input type="text" class="form-control" id="inputDepart">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="inputPosition">Position</label>
+                        <input type="text" class="form-control" id="inputPosition">
+                    </div>
+                                  
+                    <div class="form-group">
+                        <button type="button" class="btn btn-success">Save Changes</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </form>      
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <form class="navbar-form navbar-right" role="search">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search.." name="srch-term" id="srch-term">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+            </div>
+        </form>
+      
+    </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

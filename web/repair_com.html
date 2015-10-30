@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+   
+     
+<head>
+
+    <!-- Bootstrap Core CSS -->
+    <!--link rel="stylesheet" type="text/css" href="../dist/bootstrap-3.3.5/css/bootstrap.min.css"-->  
+    
+     <!-- Font Awesome CSS -->   
+    <!--link rel="stylesheet" type="text/css" href="../dist/font-awesome/css/font-awesome.min.css"-->
+    
+    <!-- Custom Theme JavaScript -->        
+    <!--script src="../js/main.js"></script-->
+    <script src="../js/com.js"></script>
+   
+    <!-- Custom CSS -->   
+    <!--link rel="stylesheet" type="text/css" href="../css/main.css"-->
+   
+
+</head>   
+    
+    
+    
+    <body>                           
+               
+        <div class="modal-header">           
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button>
+               <h3 class="modal-title-ex-file" id="lineModalLabel-profile-form"><i class="fa fa-wrench"></i>
+                  Repair & Services </h3>                         
+        </div>
+        
+        
+        <div class="modal-body repair-service">
+         
+           
+            <form class="repair-com-form">
+                <div class="container-fluid">
+                    <div class="row">		 
+                        
+                                <div class="form-group">
+  				                                        
+                                     <p class="form-control-static cust-info "></p>                                                                                      
+                                
+                    
+                                <div class="form-group hidden" >
+                                    <label for="exampleInputName1">iduser</label>
+                                    <input type="text" class="cust-info" name="iduser" id="iduser" placeholder="Enter iduser">
+                                    
+                                </div>
+    				
+                                <div class="form-group hidden">
+                                    <label for="exampleInputLastName1">status</label>
+                                    <input type="text" class="form-control" name="idstatus" id="idstatus" value="1">
+                                </div>                                                             
+                                                                
+                  
+                                 <div class="form-group">
+  				    <label for="exampleInputName7">Asset No.</label>
+  				    <input type="text" class="form-control" name="asset_no" id="asset_no"  placeholder="กรุณาใส่ Asset No." onkeyup="chkAsset(); return false;" >
+                                </div> 
+                                                                                           
+                                
+                                <!-- select device type -->
+                                <div class="form-group">
+                                   <label for="select-unit">Select Device type :</label>
+                                   <select class="form-control" id="iddevice_type" name="iddevice_type" onchange="check_device_type()" >
+                                       
+                                   </select>
+                                </div>
+                                
+                                 <div class="form-group com-name hidden">
+                                    <label for="exampleInputName2">Computer Name</label>
+                                     <input type="text" class="form-control" name="computer_name" id="computer_name"  placeholder="กรุณาใส่ Computer Name">
+                                </div>
+                                 
+                                <div class="form-group">
+  				    <label for="exampleInputName9">details :</label>
+                                    <textarea class="form-control custom-control" rows="3" name="details"  id="details" placeholder="กรุณาแจ้งข้อมูลที่ต้องการรับบริการ" style="resize:none"></textarea>  				    
+			        </div> 
+
+                                <div class="form-group hidden">
+  				    <label for="exampleInputPassword3">form-type</label>
+  				    <input type="text" class="form-control" name="form-type" id="form-type" value="POST">
+				</div>                              
+           
+        
+                            <div class="row">
+                                <button type="submit" id="submit" class="btn btn-primary center-block btn-repair-job-com">Submit</button>
+                            </div><!--div /.row -->
+                </div>
+            </div>
+        </form>
+        
+
+ </div>
+        
+        
+    
+    </body>
+    
+    
+</html>
