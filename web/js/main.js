@@ -3,8 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-//var webapp = "http://172.16.70.100/mxerve/";
-var webapp = "/mxerve/";
+var webapp = "http://172.16.70.100/mxerve/";
+//var webapp = "/mxerve/";
 
 var role = JSON.parse(localStorage.getItem('role'));
 var modal_remote_link;
@@ -555,6 +555,9 @@ function loadmenubar(){
                 
                 var html="";
                 var html1="";
+                var unitactive;
+                var fileunitactive;
+                
                 //var role = JSON.parse(localStorage.getItem('role'));
                 shDataActUnit = role.actunit.split(",");
                 
@@ -566,17 +569,23 @@ function loadmenubar(){
                     if (key !== '5') html += "<li><a data-toggle='modal' class='repair-service' href='#myModal' data-load-remote='repair_"+shData.data[key].filename+".html' data-remote-target='#myModal .modal-body'><i class='fa fa-plus-circle'></i>"  +" "+shData.data[key].menu+"</a></li>";                                                                                         
                     
                                         
-                    if (shDataActUnit[parseInt(key)+1] === 'true') 
+                    if (shDataActUnit[parseInt(key)+1] === 'true') {
                        
                         html1 += "<li><a class='menu-bar-unit' id='menu-unit-"+key+"'  href=javascript:change_unit('"+shData.data[key].shortname+"','"+shData.data[key].filename+"') ><i class='fa fa-arrow-circle-right'></i>"  +" "+shData.data[key].shortname+"</a></li>";
                          
                             //--- show main unit (set page in Add Job menubar) ---
-                            if(key==0){
-                                change_unit(shData.data[key].shortname,shData.data[key].filename);
+                            //if(key==0){
+                                //change_unit(shData.data[key].shortname,shData.data[key].filename);
                                 //alert(key+" : "+shData.data[key].shortname);
-                            } 
-                             
-                }                                       
+                            //} 
+                        unitactive = shData.data[key].shortname;   
+                        fileunitactive = shData.data[key].filename;
+                        
+                    }       
+                }     
+                
+                change_unit(unitactive,fileunitactive);
+                //alert(unitactive+" : "+unitactive);
                 
                 html += "<li class='divider'></li>";
                 html += "<li><a href='job_status.html' target='ifrm'><i class='fa fa-arrow-circle-right'></i> Job Status History </a></li>";
@@ -840,7 +849,7 @@ function checkRole(idrole){
             $('.manager').show();
             break;
         case 4:
-            $('.staff').show();
+            $('.operator').show();
             break;
     }
 }
